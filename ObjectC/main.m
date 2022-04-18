@@ -35,7 +35,7 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         //create instance object
-        //관례적으로 new를 쓰지 않음. (동적할당과 초기화를 따로함)
+        //관례적으로 new를 쓰지 않음. (동적할당과 초기화를 따로하는것이 보통임)
         //Vehicle *hello = [Vehicle new];
         Vehicle *hello = [[Vehicle alloc]init];
         //[Receiver Message]
