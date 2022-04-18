@@ -13,8 +13,13 @@
     int seats;
 }
 //member method
+//setter
 -(void)setWheels:(int)w;
 -(void)setSeats:(int)s;
+//getter
+//objective c 에서 getter명은 변수명과 동일하게 쓰는것이 권장됨.
+-(int)wheels;
+-(int)seats;
 -(void)print;
 @end
 
@@ -29,6 +34,13 @@
     NSLog(@"wheels : %i, seats : %i",wheels,seats);
 }
 
+-(int)seats{
+    return seats;
+}
+-(int)wheels{
+    return wheels;
+}
+
 
 @end
 
@@ -41,7 +53,8 @@ int main(int argc, const char * argv[]) {
         //[Receiver Message]
         [hello setWheels:4];
         [hello setSeats:2];
-        [hello print];
+        //[hello print];
+        NSLog(@"wheels : %i, seats : %i",[hello wheels],[hello seats]);
         
         
     }
