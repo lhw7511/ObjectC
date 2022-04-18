@@ -27,6 +27,7 @@ int main(int argc, const char * argv[]) {
         
         //파라미터 여러개 받기
         [hello setWheels:10 Seats:10];
+        [hello setWheelsAndSeats:20 :20];
         NSLog(@"wheels : %i, seats : %i",hello.getWheels,hello.seats);
         
         

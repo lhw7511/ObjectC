@@ -31,4 +31,8 @@
     wheels = w;
     seats = s;
 }
+-(void) setWheelsAndSeats:(int)w :(int)s{
+    wheels  = w;
+    seats = s;
+}
 @end

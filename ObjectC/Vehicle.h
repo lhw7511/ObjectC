@@ -32,7 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 //파라미터 여러개 받기
 -(void) setWheels:(int)w Seats:(int)s;
-
+-(void) setWheelsAndSeats:(int)w :(int)s;
 @end
 
 NS_ASSUME_NONNULL_END
