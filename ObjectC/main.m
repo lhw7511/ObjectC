@@ -27,10 +27,39 @@ int main(int argc, const char * argv[]) {
         
         //파라미터 여러개 받기
         [hello setWheels:10 Seats:10];
-        [hello setWheelsAndSeats:20 :20];
-        NSLog(@"wheels : %i, seats : %i",hello.getWheels,hello.seats);
+        [hello setWheelsAndSeats:4 :4];
         
+        if([hello getWheels] == 20){
+            NSLog(@"wheels : 20");
+        }else if(hello.getWheels == 4){
+            NSLog(@"wheels : 4");
+        }else{
+            NSLog(@"no");
+        }
         
+        switch (hello.seats) {
+            case 4:
+                NSLog(@"wheels : 4");
+                break;
+            case 2:
+                NSLog(@"wheels : 2");
+                break;
+            default:
+                NSLog(@"no");
+                break;
+        }
+        
+        NSLog(@"wheels : %i",hello.wheels);
+        
+        for(int i = 0; i<hello.wheels; i++){
+            NSLog(@"wheels %i",i);
+        }
+        
+        int i =0;
+        while (i<hello.seats) {
+            NSLog(@"seats : %i",i);
+            i++;
+        }
     }
     return 0;
 }
