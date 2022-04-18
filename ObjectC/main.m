@@ -9,12 +9,14 @@
 @interface Vehicle : NSObject{
     //member variable
     //초기화 하면 안됨
-    int wheels;
-    int seats;
+//property를 사용하면 내부변수를 선언해주지않아도 동작가능
+//    int wheels;
+//    int seats;
 }
 //member method
 //getter setter 를 수동으로 선언해주지 않아도 자동으로 만들어줌(java lombok과 유사)
-@property int wheels;
+//property의 기본 getter명은 변수명, setter명은 set+변수명(첫글자대문자)로인식함. 하지만 기본 object c 스타일을 따르는것이 좋음
+@property (getter=getWheels) int wheels;
 @property int seats;
 //setter
 //-(void)setWheels:(int)w;
@@ -60,7 +62,12 @@ int main(int argc, const char * argv[]) {
         [hello setWheels:4];
         [hello setSeats:2];
         //[hello print];
-        NSLog(@"wheels : %i, seats : %i",[hello wheels],[hello seats]);
+        NSLog(@"wheels : %i, seats : %i",[hello getWheels],[hello seats]);
+        //dot 연산자
+        //java 처럼 . 으로 변수에 값 대입 또는 메소드호출이 가능함.
+        hello.wheels = 4;
+        hello.seats = 5;
+        NSLog(@"wheels : %i, seats : %i",hello.getWheels,hello.seats);
         
         
     }
